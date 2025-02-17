@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Expense Tracker</h1>
+            <div class="dark-mode-toggle">
+                <input type="checkbox" id="dark-mode-switch">
+                <label for="dark-mode-switch" class="slider"></label>
+            </div>
+            
+        </header>
+        <main>
+            <section class="form-section">
+                <form id="transaction-form">
+                    <input type="text" id="description" placeholder="Enter Description" required>
+                    <input type="number" id="amount" placeholder="Enter Amount" required>
+                    <input type="date" id="date" required>
+                    <select id="type">
+                        <option value="income">Income</option>
+                        <option value="expense">Expense</option>
+                    </select>
+                    <button type="submit">Add Transaction</button>
+                </form>
+            </section>
+            <section class="summary-section">
+                <div>
+                    <h3>Total Income</h3>
+                    <p id="total-income">₹0</p>
+                </div>
+                <div>
+                    <h3>Total Expense</h3>
+                    <p id="total-expense">₹0</p>
+                </div>
+                <div>
+                    <h3>Balance</h3>
+                    <p id="balance">₹0</p>
+                </div>
+            </section>
+            <section class="transactions-section">
+                <h3>Transaction History</h3>
+                <ul id="transaction-list"></ul>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
